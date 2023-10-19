@@ -5,7 +5,7 @@ class Document {
   Document() : _json = jsonDecode(documentJson);
   (String, {DateTime modified}) get metadata {
     // Add from here...
-    const title = 'My Document';
+    const title = 'MY DOCUMENT';
     final now = DateTime.now();
 
     return (title, modified: now);
