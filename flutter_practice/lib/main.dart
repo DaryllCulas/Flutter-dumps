@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/scaffold_concepts.dart';
 
 // function to trigger build process
 void main() => runApp(const MyApp());
