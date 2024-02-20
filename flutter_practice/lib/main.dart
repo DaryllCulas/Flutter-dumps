@@ -40,9 +40,11 @@ class MyApp extends StatelessWidget {
               ),
               ListTile(
                 title: Text('Item 1'),
+                leading: Icon(Icons.people),
               ),
               ListTile(
                 title: Text('Item 2'),
+                leading: Icon(Icons.home),
               ),
               ListTile(
                 title: Text('Item 3'),
