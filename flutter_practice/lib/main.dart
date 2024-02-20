@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/sample_widgets/animated_builder.dart';
+import 'package:flutter_practice/sample_widgets/animated_container_widget.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: AnimatedBuilderWidget(), // Change here
+        body: AnimatedContainerWidget(), // Change here
       ),
     );
   }
