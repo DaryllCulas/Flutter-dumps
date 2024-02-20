@@ -7,6 +7,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int index = 0;
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -16,6 +17,28 @@ class MyApp extends StatelessWidget {
           child: Text(
             "Welcome to the world!!!",
             style: TextStyle(color: Colors.black, fontSize: 40.0),
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          elevation: 10.0,
+          child: const Icon(Icons.add),
+          onPressed: () {
+            debugPrint('Pressed ${(index++)}');
+          },
+        ),
+        drawer: Drawer(
+          child: ListView(
+            children: const <Widget>[
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                ),
+                child: Text(
+                  'Sample drawer',
+                  style: TextStyle(color: Colors.black, fontSize: 24),
+                ),
+              ),
+            ],
           ),
         ),
       ),
