@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_practice/sample_widgets/drawer_sample.dart';
-import 'package:flutter_practice/sample_widgets/shopping_list.dart';
+import 'package:flutter_practice/sample_widgets/animated_alignment_widget.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,15 +10,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: Scaffold(
-      //   body: DrawerSample(), // Change here
-      // ),
-      home: ShoppingList(
-        products: [
-          Product(name: 'Eggs'),
-          Product(name: 'Flour'),
-          Product(name: 'Chocolate'),
-        ],
+      home: Scaffold(
+        body: AnimatedAlignmentWidget(), // Change here
       ),
     );
   }
