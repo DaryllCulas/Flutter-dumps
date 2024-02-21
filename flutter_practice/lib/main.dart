@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/sample_widgets/animated_crossfade_widget.dart';
+import 'package:flutter_practice/sample_widgets/animated_text_style_default.widget.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
           ThemeData.dark().copyWith(scaffoldBackgroundColor: Colors.blueGrey),
       debugShowCheckedModeBanner: false,
       home: const Scaffold(
-        body: AnimatedCrossfadeWidget(), // Change here
+        body: AnimatedDefaultText(), // Change here
       ),
     );
   }
