@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/sample_widgets/animated_container_widget.dart';
+import 'package:flutter_practice/sample_widgets/animated_crossfade_widget.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,10 +8,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme:
+          ThemeData.dark().copyWith(scaffoldBackgroundColor: Colors.blueGrey),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: AnimatedContainerWidget(), // Change here
+      home: const Scaffold(
+        body: AnimatedCrossfadeWidget(), // Change here
       ),
     );
   }
