@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/sample_widgets/animated_list_widget.dart';
+import 'package:flutter_practice/sample_widgets/basic_flutter.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
           ThemeData.dark().copyWith(scaffoldBackgroundColor: Colors.blueGrey),
       debugShowCheckedModeBanner: false,
       home: const Scaffold(
-        body: AnimatedListHere(), // Change here
+        body: BasicFlutterSample(), // Change here
       ),
     );
   }
