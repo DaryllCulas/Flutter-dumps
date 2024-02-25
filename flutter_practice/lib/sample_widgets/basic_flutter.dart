@@ -15,27 +15,21 @@ class BasicFlutterSample extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              decoration: const BoxDecoration(
-                color: Colors.green,
-              ),
-              child: const Text('Green'),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                color: Colors.red,
-              ),
-              child: const Text('Red'),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: const Text('Blue'),
-            ),
+            _section('This is green', Colors.green),
+            _section('This is red', Colors.red),
+            _section('This is blue', Colors.blue),
           ],
         ),
       ),
+    );
+  }
+
+  Widget _section(String title, Color color) {
+    return Container(
+      decoration: BoxDecoration(
+        color: color,
+      ),
+      child: Text(title),
     );
   }
 }
