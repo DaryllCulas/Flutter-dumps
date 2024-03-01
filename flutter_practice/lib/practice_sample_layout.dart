@@ -83,7 +83,7 @@ class PracticeLayoutHere extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.black12,
+        backgroundColor: Colors.black,
         elevation: 10.0,
         items: const [
           BottomNavigationBarItem(
@@ -99,6 +99,17 @@ class PracticeLayoutHere extends StatelessWidget {
             label: "Shop",
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          debugPrint("You clicked this");
+        },
+        backgroundColor: Colors.black,
+        hoverColor: Colors.white,
+        child: const Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
       ),
     );
   }
