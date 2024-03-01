@@ -111,6 +111,17 @@ class PracticeLayoutHere extends StatelessWidget {
           color: Colors.white,
         ),
       ),
+      body: Container(
+          height: 60,
+          width: 100,
+          padding: const EdgeInsets.only(left: 20.0, top: 100.0),
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('images/gear5luffy.jpeg'),
+              fit: BoxFit.cover,
+            ),
+            shape: BoxShape.circle,
+          )),
     );
   }
 }
