@@ -81,7 +81,25 @@ class PracticeLayoutHere extends StatelessWidget {
             ),
           ],
         ),
-      ), //Drawer
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black12,
+        elevation: 10.0,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_filled),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.camera),
+            label: "Images",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shop_2),
+            label: "Shop",
+          ),
+        ],
+      ),
     );
   }
 }
