@@ -111,17 +111,82 @@ class PracticeLayoutHere extends StatelessWidget {
           color: Colors.white,
         ),
       ),
-      body: Container(
-          height: 60,
-          width: 100,
-          padding: const EdgeInsets.only(left: 20.0, top: 100.0),
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('images/gear5luffy.jpeg'),
-              fit: BoxFit.cover,
-            ),
-            shape: BoxShape.circle,
-          )),
+      body: ListView(
+        children: [
+          Image.asset(
+            'images/brook.png',
+            width: 100,
+            height: 150,
+            fit: BoxFit.cover,
+          ),
+          Image.asset(
+            'images/chopper.png',
+            width: 100,
+            height: 150,
+            fit: BoxFit.cover,
+          ),
+          Image.asset(
+            'images/eggheadArc.jpg',
+            width: 100,
+            height: 150,
+            fit: BoxFit.cover,
+          ),
+          Image.asset(
+            'images/franky.png',
+            width: 100,
+            height: 150,
+            fit: BoxFit.cover,
+          ),
+          Image.asset(
+            'images/gear5luffy.jpeg',
+            width: 100,
+            height: 150,
+            fit: BoxFit.cover,
+          ),
+          Image.asset(
+            'images/jimbei.jpeg',
+            width: 100,
+            height: 150,
+            fit: BoxFit.cover,
+          ),
+          Image.asset(
+            'images/nami.png',
+            width: 100,
+            height: 150,
+            fit: BoxFit.cover,
+          ),
+          Image.asset(
+            'images/nicoRobin.jpg',
+            width: 100,
+            height: 150,
+            fit: BoxFit.cover,
+          ),
+          Image.asset(
+            'images/sanji.jpeg',
+            width: 100,
+            height: 150,
+            fit: BoxFit.cover,
+          ),
+          Image.asset(
+            'images/usopp.png',
+            width: 100,
+            height: 150,
+            fit: BoxFit.cover,
+          ),
+          Image.asset(
+            'images/wanoArc.jpg',
+            width: 100,
+            height: 150,
+            fit: BoxFit.cover,
+          ),
+          Image.asset(
+            'images/zoro.png',
+            width: 100,
+            height: 150,
+            fit: BoxFit.cover,
+          ),
+        ],
+      ),
     );
   }
 }
