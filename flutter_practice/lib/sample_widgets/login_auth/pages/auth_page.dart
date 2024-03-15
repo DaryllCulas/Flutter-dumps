@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/sample_widgets/basic_flutter.dart';
+import 'package:flutter_practice/sample_widgets/login_auth/pages/basic_flutter.dart';
 import 'package:flutter_practice/sample_widgets/login_auth/login_form.dart';
 
 class AuthPage extends StatelessWidget {
@@ -15,7 +15,7 @@ class AuthPage extends StatelessWidget {
           // user is logged in
           if (snapshot.hasData) {
             debugPrint('Successfully logged in');
-            return const BasicFlutterSample();
+            return BasicFlutterSample();
           } else {
             debugPrint('Invalid email and password');
             return LoginForm();
