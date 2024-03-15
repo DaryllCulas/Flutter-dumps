@@ -5,18 +5,37 @@ import 'package:flutter_practice/sample_widgets/login_auth/buttons.dart';
 import 'package:flutter_practice/sample_widgets/login_auth/components/square_tile.dart';
 import 'package:flutter_practice/sample_widgets/login_auth/textfields.dart';
 
-class LoginForm extends StatelessWidget {
-  LoginForm({super.key});
+class LoginForm extends StatefulWidget {
+  const LoginForm({super.key});
 
+  @override
+  State<LoginForm> createState() => _LoginFormState();
+}
+
+class _LoginFormState extends State<LoginForm> {
   // text editing controller
   final emailController = TextEditingController();
+
   final passwordController = TextEditingController();
 
+// sign user in method
   void signUserIn() async {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Center(
+          child: CircularProgressIndicator(),
+        );
+      },
+    );
+
     await FirebaseAuth.instance.signInWithEmailAndPassword(
       email: emailController.text,
       password: passwordController.text,
     );
+
+    // ignore: use_build_context_synchronously
+    Navigator.pop(context);
   }
 
   @override
