@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1029295841504",
+    "project_id": "practiceloginauth",
+    "storage_bucket": "practiceloginauth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029295841504:android:1e874c4f981abda808f085",
+        "android_client_info": {
+          "package_name": "com.example.flutter_practice"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEAAR4w00d-ORQ4goTTLGPleLYsuP7AhA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029295841504:android:c0a91ab75507f9db08f085",
+        "android_client_info": {
+          "package_name": "com.loginAuth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEAAR4w00d-ORQ4goTTLGPleLYsuP7AhA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
