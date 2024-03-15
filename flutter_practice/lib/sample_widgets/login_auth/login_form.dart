@@ -6,7 +6,8 @@ import 'package:flutter_practice/sample_widgets/login_auth/components/square_til
 import 'package:flutter_practice/sample_widgets/login_auth/textfields.dart';
 
 class LoginForm extends StatefulWidget {
-  const LoginForm({super.key});
+  final Function()? onTap;
+  const LoginForm({super.key, required this.onTap});
 
   @override
   State<LoginForm> createState() => _LoginFormState();
@@ -29,13 +30,51 @@ class _LoginFormState extends State<LoginForm> {
       },
     );
 
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
-      email: emailController.text,
-      password: passwordController.text,
-    );
+    //try sign in
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text,
+      );
+    } on FirebaseAuthException catch (e) {
+      // ignore: use_build_context_synchronously
+      Navigator.pop(context);
+      //Wrong email
+      if (e.code == 'user-not-found') {
+        // Show wrongEmailMessage error to user
+        wrongEmailMessage();
 
-    // ignore: use_build_context_synchronously
+        //Wrong password
+      } else if (e.code == 'wrong-password') {
+        // Show wrongPasswordMessage error to user
+        wrongPasswordMessage();
+      }
+    }
+
     Navigator.pop(context);
+  }
+
+  // Wrong email message popup
+  void wrongEmailMessage() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const AlertDialog(
+          title: Text('Incorrect Email'),
+        );
+      },
+    );
+  }
+
+  void wrongPasswordMessage() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const AlertDialog(
+          title: Text('Incorrect Password'),
+        );
+      },
+    );
   }
 
   @override
@@ -100,6 +139,7 @@ class _LoginFormState extends State<LoginForm> {
               const SizedBox(height: 30.0),
               // sign in button
               MyButtons(
+                text: 'Sign In',
                 onTap: signUserIn,
               ),
               const SizedBox(height: 30.0),
@@ -143,20 +183,23 @@ class _LoginFormState extends State<LoginForm> {
               const SizedBox(height: 20.0),
               // not a member? register now
 
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'Don\'t have an account?',
                     style: TextStyle(color: Colors.black),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 8,
                   ),
-                  Text(
-                    'Register Now',
-                    style: TextStyle(
-                      color: Colors.blue,
+                  GestureDetector(
+                    onTap: widget.onTap,
+                    child: const Text(
+                      'Register Now',
+                      style: TextStyle(
+                        color: Colors.blue,
+                      ),
                     ),
                   ),
                 ],

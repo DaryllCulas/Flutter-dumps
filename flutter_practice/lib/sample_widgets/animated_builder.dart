@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class AnimatedBuilderWidget extends StatefulWidget {
-  const AnimatedBuilderWidget({Key? key}) : super(key: key);
+  const AnimatedBuilderWidget({super.key});
 
   @override
   State<AnimatedBuilderWidget> createState() => _AnimatedBuilderWidgetState();

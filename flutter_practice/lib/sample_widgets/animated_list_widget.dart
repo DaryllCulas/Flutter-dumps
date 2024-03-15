@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AnimatedListHere extends StatefulWidget {
-  const AnimatedListHere({Key? key}) : super(key: key);
+  const AnimatedListHere({super.key});
 
   @override
   State<AnimatedListHere> createState() => _AnimatedListHereState();

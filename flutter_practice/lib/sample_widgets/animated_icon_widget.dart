@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AnimatedIconHere extends StatefulWidget {
-  const AnimatedIconHere({Key? key}) : super(key: key);
+  const AnimatedIconHere({super.key});
 
   @override
   State<AnimatedIconHere> createState() => _AnimatedIconHereState();

@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_practice/sample_widgets/login_auth/pages/basic_flutter.dart';
-import 'package:flutter_practice/sample_widgets/login_auth/login_form.dart';
+
+import 'package:flutter_practice/sample_widgets/login_auth/pages/login_or_register_page.dart';
 
 class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
@@ -18,7 +19,7 @@ class AuthPage extends StatelessWidget {
             return BasicFlutterSample();
           } else {
             debugPrint('Invalid email and password');
-            return LoginForm();
+            return const LoginOrRegisterUser();
           }
         },
       ),
