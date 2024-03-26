@@ -3,7 +3,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutter_practice/sample_widgets/login_auth/buttons.dart';
+import 'package:flutter_practice/sample_widgets/login_auth/components/buttons.dart';
 import 'package:flutter_practice/sample_widgets/login_auth/components/square_tile.dart';
 import 'package:flutter_practice/sample_widgets/login_auth/textfields.dart';
 

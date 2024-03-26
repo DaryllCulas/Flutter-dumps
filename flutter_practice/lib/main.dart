@@ -2,7 +2,8 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_practice/sample_widgets/login_auth/login_form.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter_practice/sample_widgets/login_auth/pages/auth_page.dart';
+import 'package:flutter_practice/sample_widgets/adminDashboard/admin_dashboard.dart';
+// import 'package:flutter_practice/sample_widgets/login_auth/pages/auth_page.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: const Color.fromARGB(255, 182, 212, 228)),
       debugShowCheckedModeBanner: false,
       home: const Scaffold(
-        body: AuthPage(),
+        body: AdminDashboard(),
       ),
     );
   }
